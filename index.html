@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Library</title>
+</head>
+<body>
+    <div class="createModal">
+        <form class="createForm">
+            <div class="inputForm">
+                <input type="text" name="title" data-id="">
+                <label for="title">Title</label>
+            </div>
+            <div class="inputForm">
+                <input type="text" name="author">
+                <label for="author">Author</label>
+            </div>
+            <div class="inputForm">
+                <input type="number" name="pages">
+                <label for="pages">Pages</label>
+            </div>
+            <div class="inputForm row">
+                <label for="readState">Did you already read this book?</label>
+                <input type="checkbox" name="readState">
+            </div>
+            <button class="btn">Crete Book</button>
+        </form>
+    </div>
+    <main class="wrapper">
+        <div class="navbar">
+            <h2>Libratix</h2>
+            <button class="btn" id="newBook">New Book</button>
+        </div>
+        <div class="bookWrapper"></div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

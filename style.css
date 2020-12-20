@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eeeeee;
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+
+
+.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Books */
+.bookWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 120px;
+}
+
+.bookContainer{
+    position: relative;
+    min-width: 250px;
+    max-width: 600px;
+}
+
+    .bookCover{
+        width: 100%;
+        height: 300px;
+        background-color: #cacacaa8;
+        margin-bottom: 8px;
+    }
+
+    .bookAuthor{
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+    .bookTitle{
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 4px;
+    }
+
+    .bookPages{
+        font-size: 12px;
+    }
+
+/* Navbar */
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+    .btn{
+        border: none;
+        font-weight: 600;
+        font-size: 14px;
+        background-color: #eeda24;
+        padding: 14px 30px;
+        border-radius: 4px;
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        outline: none;
+        transition: background-color 0.3s ease-out;
+    }
+
+    .btn:hover{
+        background-color: #eeda24c5;
+    }
+
+    .btn.remove,
+    .btn.edit{
+        background-color: transparent;
+        color: #da1f1f;
+        position: absolute;
+        top: 12px;
+        font-size: 12px;
+        left: 16px;
+        padding: 0;
+    }
+
+    .btn.edit{
+        top: 32px;
+    }
+
+    .btn.edit.read{
+        color: green;
+    }
+
+/* Modal */
+.createModal{
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 10000;
+}
+
+    .createForm{
+        min-width: 550px;
+        padding: 64px;
+    }
+
+        .inputForm{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .inputForm.row{
+            flex-direction: row-reverse;
+            margin: 0 0 24px 0;
+        }
+
+        input{
+            padding: 14px;
+            outline: none;
+            border: none;
+            background-color: #eeeeee;
+            border-radius: 2px;
+            margin-bottom: 12px;
+            width: 100%;
+        }
+
+            input[name="pages"]{
+                width: 150px;
+            }
+
+            
+            input[name="readState"]{
+                width: fit-content;
+                height: fit-content;
+                margin-right: 8px;
+            }
+
+        label{
+            font-size: 12px;
+            margin-bottom: 4px;
+            color: #ffffff;
+            width: 100%;
+        }
+
+
+        
+
+.createModal.active{
+    display: flex;
+}
